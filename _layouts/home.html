@@ -4,22 +4,80 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <!--<h1 class="page-heading">Posts</h1>-->
   
   {{ content }}
 
-  <ul class="post-list">
+    <div class="container">
+
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
+
+      <a href="#myCarousel"  data-slide-to="{{ forloop.index0 }}">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          
+          <div class="cardTitle">
+            <h2 class="noPadding noMargin">
+              <span class="post-meta">{{ post.category }}</span><br>
+              {{ post.title | escape }}
+            </h2>
+          </div>
+
+          <div class="imgContainer">
+            <div class="cardHeight"></div>
+              <img class="card" src="{{post.image-card}}" data-toggle="modal" data-target="#myModal">
+          </div>
+
+        </div>
+      </a>
+
+
+
+
     {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false" data-keyboard="true">
+          <div class="carousel-inner">      
+        
+            {% for post in site.posts %}
+
+              <div class="item">
+                <picture>
+                  <source media="(orientation: landscape)" srcset="{{ post.image }}" />
+                  <img src="{{ post.image-card }}" alt="my img" class="fillImg" />
+                </picture>
+              </div>
+
+            {% endfor %}
+
+            <script type="text/javascript">
+              var x = document.getElementsByClassName("item").length;
+              console.log(x);
+              var allItems = document.getElementsByClassName("item");
+              allItems[0].className += ' active'
+
+            </script>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </div>
+
+
+
+<!-- BACKUPZ -->
+<!--
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+      -->

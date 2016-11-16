@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Superhot VR"
+title:  "notSoHot"
 date:   2016-11-15
 category: game
-image-card: images/post01.jpg
+image-card: images/post02.jpg
 ---
 This is a dummy game. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
 

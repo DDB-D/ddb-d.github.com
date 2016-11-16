@@ -235,3 +235,54 @@
     }
   }
 }
+
+.card{
+  //z-index: -1;
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.cardHeight{
+  margin-top: 100%;
+}
+
+.cardTitle{
+  width: 100%;
+  background-color: silver;
+  //margin-top: 100%
+}
+
+.noPadding{
+  padding: 0;
+}
+.noMargin{
+  margin: 0;
+}
+
+.fill{
+  height: 100%; 
+}
+
+.imgContainer{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.cardImg{
+  position:absolute;
+  top:50%;
+  min-height:100%;
+  display:block;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  min-width:100%;
+}
