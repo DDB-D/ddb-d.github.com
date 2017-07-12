@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "very Much Hot"
+date:   2016-11-15
+category: game
+image-card: images/post04.jpg
+---
+This is a dummy game. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
+
+[Game-Link][game-link]
+
+[game-link]: http://www.gamestar.de/spiele/superhot/news/superhot_vr,51081,3274213.html

@@ -13,23 +13,36 @@ layout: default
     {% for post in site.posts %}
 
 
-      <a href="#myCarousel"  data-slide-to="{{ forloop.index0 }}">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-          
-          <div class="cardTitle">
-            <h2 class="noPadding noMargin">
-              <span class="post-meta">{{ post.category }}</span><br>
-              {{ post.title | escape }}
-            </h2>
-          </div>
-
+      <a href="#myCarousel"  data-slide-to="{{ forloop.index0 }}"> 
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">     
           <div class="imgContainer">
-            <div class="cardHeight"></div>
-              <img class="card" src="{{post.image-card}}" data-toggle="modal" data-target="#myModal">
-          </div>
 
+            <div class="cardHeight">
+              <img class="card" src="{{post.image-card}}" data-toggle="modal" data-target="#myModal" style="object-fit: contain; margin: auto;">
+            </div>
+
+          </div>
+          <div class="cardTitle">
+                
+                  <h2 class="noPadding noMargin">
+                    <span class="post-meta">{{ post.category }}</span><br>
+                    {{ post.title | escape }}
+                  </h2>
+              
+              </div>
         </div>
       </a>
+
+<!--
+              <div class="cardTitle">
+                
+                  <h2 class="noPadding noMargin">
+                    <span class="post-meta">{{ post.category }}</span><br>
+                    {{ post.title | escape }}
+                  </h2>
+              
+              </div>
+-->      
 
 
 
@@ -45,6 +58,7 @@ layout: default
       <!-- Modal content-->
       <div class="modal-content">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false" data-keyboard="true">
+          
           <div class="carousel-inner">      
         
             {% for post in site.posts %}
@@ -68,6 +82,15 @@ layout: default
 
           </div>
         </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
       </div>
 
     </div>
