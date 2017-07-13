@@ -35,10 +35,17 @@ $on-laptop:        800px !default;
   }
 }
 
+
 // Import partials.
 @import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting",
-  "_bootstrap"
+	"minima/base",
+	"minima/layout",
+	"minima/head",
+	"minima/foot",
+	"minima/pageContent",
+	"minima/posts",
+	"minima/card",
+	"minima/modalCarousel",
+	"minima/syntax-highlighting",
+	"_bootstrap"
 ;

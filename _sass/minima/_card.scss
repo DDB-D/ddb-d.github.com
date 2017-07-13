@@ -1,0 +1,46 @@
+/*
+* Body: Card
+*/
+
+.cardHeight{
+    margin-top: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.cardTitle{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.VertAlignCardTitle{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.hideCardTitle{
+  //visibility: hidden;
+  opacity: 0;
+}
+
+.hideCardTitle:hover{
+  opacity: 1;
+}
+
+.imgCard{
+  display: table-cell;
+  vertical-align: middle;
+  background-size:contain; 
+  background-position:center; 
+  background-repeat:no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.centerImgCard{
+  width: 50%; 
+  margin: 0 auto;
+}

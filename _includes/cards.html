@@ -1,0 +1,26 @@
+
+    {% for post in site.posts %}
+
+
+      <a href="#myCarousel"  data-slide-to="{{ forloop.index0 }}"> 
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">     
+          
+          <div class="imgCard centerImgCard" style="background-image: url({{post.image-card}});" data-toggle="modal" data-target="#myModal">
+
+              <div class="cardTitle hideCardTitle">
+                <div class="VertAlignCardTitle">
+                  <h2 class="noPadding noMargin">
+                      {{ post.title | escape }}
+                  </h2>
+                </div>
+              </div>
+
+              <div class="cardHeight"></div> 
+
+          </div>
+          
+        </div>
+      </a>
+
+    {% endfor %}
+
