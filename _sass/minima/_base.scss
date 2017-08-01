@@ -8,7 +8,11 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
+html, body { 
+  margin:0; 
+  padding:0; 
+  min-height:100%; 
+}
 
 /**
  * Basic styling
